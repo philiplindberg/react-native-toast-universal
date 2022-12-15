@@ -1,20 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, useColorScheme, View } from 'react-native'
 
-import * as Toast from 'toast';
+import { Toast } from 'toast'
 
 export default function App() {
+  const colorScheme = useColorScheme()
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: colorScheme === 'light' ? '#fff' : '#000',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  })
+
   return (
     <View style={styles.container}>
-      <Text>{Toast.hello()}</Text>
+      <Button
+        title='Show Toast'
+        onPress={() => Toast.show('I\'m in a toast!')}
+      />
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
