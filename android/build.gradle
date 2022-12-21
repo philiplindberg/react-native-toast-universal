@@ -88,4 +88,8 @@ repositories {
 dependencies {
   implementation project(':expo-modules-core')
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${getKotlinVersion()}"
+  implementation 'com.google.android.material:material:1.7.0'
+  def lifecycle_version = "2.5.1"
+  implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+  implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 }
