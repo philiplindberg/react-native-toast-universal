@@ -8,17 +8,20 @@ import expo.modules.kotlin.modules.ModuleDefinition
 import expo.modules.kotlin.types.Enumerable
 
 class ToastModule : Module() {
-  private val rootView
-  get() = requireNotNull(appContext.activityProvider?.currentActivity?.window?.decorView?.rootView)
-
   override fun definition() = ModuleDefinition {
     Name("Toast")
 
     Function("show") { text: String, type: ToastType?, duration: Int ->
-      Snackbar.make(rootView, text, duration * 1000)
-        .setTextColor(Color.parseColor("#FFFFFF"))
-        .setAnimationMode(ANIMATION_MODE_SLIDE)
-        .show()
+      try {
+        val view = requireNotNull(appContext.activityProvider?.currentActivity?.window?.decorView?.findViewById(android.R.id.content))
+
+        Snackbar.make(view, text, duration * 1000)
+          .setTextColor(Color.WHITE)
+          .setAnimationMode(ANIMATION_MODE_SLIDE)
+          .show()
+      } catch (e: Exception) {
+        println(e)
+      }
     }
   }
 }
