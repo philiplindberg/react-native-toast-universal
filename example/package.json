@@ -5,10 +5,11 @@
     "start": "expo start --dev-client --clear",
     "android": "expo run:android --device",
     "ios": "expo run:ios --device",
-    "web": "expo start --web",
+    "web": "expo start --dev-client --clear --web",
     "prebuild": "EXPO_NO_GIT_STATUS=1 expo prebuild --clean"
   },
   "dependencies": {
+    "@expo/webpack-config": "^0.17.2",
     "expo": "~47.0.9",
     "expo-build-properties": "~0.4.1",
     "expo-splash-screen": "~0.17.5",

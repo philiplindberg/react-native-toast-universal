@@ -28,7 +28,9 @@
   "author": "Philip Lindberg <philip.c.lindberg@gmail.com> (https://github.com/philiplindberg)",
   "license": "MIT",
   "homepage": "https://github.com/philiplindberg/toast#readme",
-  "dependencies": {},
+  "dependencies": {
+    "react-hot-toast": "^2.4.0"
+  },
   "devDependencies": {
     "@types/react": "^18.0.25",
     "@types/react-native": "^0.70.6",

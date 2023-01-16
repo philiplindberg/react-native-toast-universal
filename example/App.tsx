@@ -1,5 +1,5 @@
 import { Pressable, PressableProps, StyleSheet, Text, useColorScheme, View } from 'react-native'
-import { Toast } from 'toast'
+import { Toast, Toaster } from 'toast'
 
 const colors = {
   success: '#35C759',
@@ -19,7 +19,7 @@ export default function App() {
     },
   })
 
-  return (
+  return <>
     <View style={styles.container}>
       <Button
         text='Show Toast (Success)'
@@ -55,7 +55,8 @@ export default function App() {
         })}
       />
     </View>
-  )
+    <Toaster />
+  </>
 }
 
 type ButtonProps = PressableProps & {
