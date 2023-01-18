@@ -1,4 +1,4 @@
-import { Pressable, PressableProps, StyleSheet, Text, useColorScheme, View } from 'react-native'
+import { Platform, Pressable, PressableProps, StyleSheet, Text, useColorScheme, View } from 'react-native'
 import { Toast, Toaster } from 'toast'
 
 const colors = {
@@ -55,7 +55,7 @@ export default function App() {
         })}
       />
     </View>
-    <Toaster />
+    {Platform.OS === 'web' && <Toaster containerStyle={{ bottom: 20 }} />}
   </>
 }
 
