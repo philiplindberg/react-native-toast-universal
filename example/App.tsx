@@ -1,6 +1,5 @@
-import { Toaster } from 'react-hot-toast'
 import { Platform, Pressable, PressableProps, StyleSheet, Text, useColorScheme, View } from 'react-native'
-import { Toast } from 'toast'
+import { Toast, Toaster } from 'toast'
 
 const colors = {
   success: '#35C759',
@@ -56,7 +55,7 @@ export default function App() {
         })}
       />
     </View>
-    {Platform.OS === 'web' && <Toaster containerStyle={{ bottom: 20 }} />}
+    {Platform.OS === 'web' && <Toaster />}
   </>
 }
 

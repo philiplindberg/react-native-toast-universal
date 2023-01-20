@@ -9,3 +9,5 @@ export const Toast = {
      : ToastModule.show(text, type, duration)
   },
 }
+
+export { Toaster } from './Toaster'
