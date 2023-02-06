@@ -48,7 +48,7 @@ public class ToastModule: Module {
       let view = SPIndicatorView(title: text, preset: .custom(icon))
       view.layout.iconSize = .init(width: 24, height: 24)
         
-      view.present(duration: duration, haptic: haptic)
+      view.present(duration: duration / 1000, haptic: haptic)
     }.runOnQueue(.main)
   }
 }

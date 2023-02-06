@@ -15,7 +15,7 @@ class ToastModule : Module() {
       try {
         val view = requireNotNull(appContext.activityProvider?.currentActivity?.window?.decorView?.findViewById(android.R.id.content))
 
-        Snackbar.make(view, text, duration * 1000)
+        Snackbar.make(view, text, duration)
           .setTextColor(Color.WHITE)
           .setAnimationMode(ANIMATION_MODE_SLIDE)
           .show()

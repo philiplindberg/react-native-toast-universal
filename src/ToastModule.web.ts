@@ -1,11 +1,11 @@
 import toast, { ToastOptions } from 'react-hot-toast'
-import { ToastProps } from './types'
+import { ToastType } from './types'
 
 export default {
-  show: ({ text, type, duration }: ToastProps) => {
+  show: (text: string, type: ToastType, duration: number) => {
     const options: ToastOptions = {
+      duration,
       position: 'bottom-center',
-      duration: duration ? duration * 1000 : 3000,
       style: {
         fontFamily: 'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
       },

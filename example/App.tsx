@@ -24,35 +24,24 @@ export default function App() {
       <Button
         text='Show Toast (Success)'
         type='success'
-        onPress={() => Toast.show({
-          text: 'I\'m a success toast!',
-          type: 'success',
-        })}
+        onPress={() => Toast.success('I\'m a success toast!')}
       />
       <View style={{ height: 15 }} />
       <Button
         text='Show Toast (Error)'
         type='error'
-        onPress={() => Toast.show({
-          text: 'I\'m an error toast!',
-          type: 'error',
-        })}
+        onPress={() => Toast.error('I\'m an error toast!')}
       />
       <View style={{ height: 15 }} />
       <Button
         text='Show Toast (Info)'
         type='info'
-        onPress={() => Toast.show({
-          text: 'I\'m an info toast!',
-          type: 'info',
-        })}
+        onPress={() => Toast.info('I\'m an info toast!')}
       />
       <View style={{ height: 15 }} />
       <Button
         text='Show Toast (No Icon)'
-        onPress={() => Toast.show({
-          text: 'I\'m a toast without an icon!',
-        })}
+        onPress={() => Toast.show({ text: 'I\'m a toast without an icon!' })}
       />
     </View>
     {Platform.OS === 'web' && <Toaster />}
