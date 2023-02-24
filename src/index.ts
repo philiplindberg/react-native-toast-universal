@@ -25,5 +25,3 @@ export const Toast = {
 const durationFromType = (type?: ToastType): number => {
   return type === 'success' ? 3000 : 4000
 }
-
-export { Toaster } from 'react-hot-toast'
