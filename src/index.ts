@@ -1,5 +1,8 @@
 import ToastModule from './ToastModule'
 import { ToastType } from './types'
+import { Toaster as _Toaster } from './Toaster'
+import * as react from 'react'
+import { ToasterProps } from 'react-hot-toast'
 
 type ToastProps = {
   text: string
@@ -25,3 +28,5 @@ export const Toast = {
 const durationFromType = (type?: ToastType): number => {
   return type === 'success' ? 3000 : 4000
 }
+
+export const Toaster = _Toaster as react.FC<ToasterProps>
