@@ -44,7 +44,32 @@ export default function App() {
         onPress={() => Toast.show({ text: 'I\'m a toast without an icon!' })}
       />
     </View>
-    {Platform.OS === 'web' && <Toaster />}
+
+    {Platform.OS === 'web' && (
+      <Toaster
+        position='bottom-center'
+        containerStyle={{ bottom: 20 }}
+        toastOptions={{
+          style: {
+            fontFamily: 'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+            fontSize: 16,
+            fontWeight: 500,
+          },
+          success: {
+            iconTheme: {
+              primary: colors.success,
+              secondary: '#FFFFFF',
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: colors.error,
+              secondary: '#FFFFFF',
+            },
+          },
+        }}
+      />
+    )}
   </>
 }
 
@@ -102,6 +127,10 @@ const Button = ({ text, type, onPress }: ButtonProps) => {
 }
 
 const colorWithOpacity = (color: string, opacity: number) => {
+  if (color.length !== 7 || !color.startsWith('#')) {
+    throw new Error('Color should be formatted as a 6 letter hex color (e.g. #ABCDEF)')
+  }
+
   const intValue = Math.round(opacity * 255)
   const hexValue = intValue.toString(16)
   return color + hexValue.padStart(2, '0').toUpperCase()
