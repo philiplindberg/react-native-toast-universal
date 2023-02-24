@@ -1,6 +1,6 @@
 import { Platform, Pressable, PressableProps, StyleSheet, Text, useColorScheme, View } from 'react-native'
 import { Toast } from 'toast'
-import { Toaster } from 'toast/web'
+import { Toaster } from 'react-hot-toast'
 
 const colors = {
   success: '#35C759',
