@@ -15,6 +15,7 @@ class ToastModule : Module() {
       try {
         val view = requireNotNull(appContext.activityProvider?.currentActivity?.window?.decorView?.findViewById(android.R.id.content))
 
+        // FIXME: displays on top of tab bar
         Snackbar.make(view, text, duration)
           .setTextColor(Color.WHITE)
           .setAnimationMode(ANIMATION_MODE_SLIDE)
