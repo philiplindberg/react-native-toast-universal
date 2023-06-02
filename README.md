@@ -1,4 +1,6 @@
-# toast
+# react-native-toast-universal
+
+Universal toast component for React Native. Supports iOS, Android & Web.
 
 ## Todo
 
