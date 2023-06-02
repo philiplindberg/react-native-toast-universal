@@ -1,6 +1,6 @@
 {
   "name": "react-native-toast-universal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Universal toast component for React Native",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -21,13 +21,13 @@
     "toast",
     "Toast"
   ],
-  "repository": "https://github.com/philiplindberg/toast",
+  "repository": "https://github.com/philiplindberg/react-native-toast-universal",
   "bugs": {
-    "url": "https://github.com/philiplindberg/toast/issues"
+    "url": "https://github.com/philiplindberg/react-native-toast-universal/issues"
   },
   "author": "Philip Lindberg <philip.c.lindberg@gmail.com> (https://github.com/philiplindberg)",
   "license": "MIT",
-  "homepage": "https://github.com/philiplindberg/toast#readme",
+  "homepage": "https://github.com/philiplindberg/react-native-toast-universal#readme",
   "dependencies": {
     "react-hot-toast": "^2.4.0"
   },
