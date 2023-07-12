@@ -51,6 +51,7 @@ afterEvaluate {
 }
 
 android {
+  namespace = "expo.modules.toast"
   compileSdkVersion safeExtGet("compileSdkVersion", 31)
 
   compileOptions {
