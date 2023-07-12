@@ -11,9 +11,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -29,17 +26,8 @@
       "package": "com.philiplindberg.toast"
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "compileSdkVersion": 32
-          }
-        }
-      ]
-    ]
+    }
   }
 }
