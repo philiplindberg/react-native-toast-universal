@@ -29,13 +29,13 @@
   "license": "MIT",
   "homepage": "https://github.com/philiplindberg/react-native-toast-universal#readme",
   "dependencies": {
-    "react-hot-toast": "^2.4.0"
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.25",
-    "@types/react-native": "^0.70.6",
-    "expo-module-scripts": "^3.0.3",
-    "expo-modules-core": "^1.0.3"
+    "@types/react": "^18.2.45",
+    "@types/react-native": "^0.73.0",
+    "expo-module-scripts": "^3.4.0",
+    "expo-modules-core": "^1.11.2"
   },
   "peerDependencies": {
     "expo": "*",
